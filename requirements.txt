@@ -1,3 +1,4 @@
+re
 scikit-learn
 nltk
 gensim
