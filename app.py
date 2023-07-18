@@ -68,8 +68,9 @@ if prompt := st.text_input("Enter your text here"):
 
     # Analyze sentiment using the model
     new_text = preprocess_text(prompt)
-    new_text = text_vectorizer.transform(new_text).toarray()
-    sentiment = naive_model.predict(new_text)
+    new_text = [new_text]  # Convert to a list of strings
+    new_text_vec = text_vectorizer.transform(new_text)  # Transform directly
+    sentiment = naive_model.predict(new_text_vec)
 
     # Determine sentiment label and corresponding response
     if sentiment[0] == 1:
