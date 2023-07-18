@@ -83,7 +83,7 @@ if prompt := st.text_input("Enter your text here"):
         color = get_random_color()
 
     # Display assistant response in chat container with colored text
-    st.text_area("Assistant:", response, height=100, max_chars=None, key=None, key=None, value=None, color=color)
+    st.text_area("Assistant:", response, height=100, max_chars=None, value=None, color=color)
 
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": response})
